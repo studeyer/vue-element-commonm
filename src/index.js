@@ -16,12 +16,11 @@ const install = function (Vue, opts = {}) {
  
 /* 支持使用标签的方式引入 */
 if (typeof window !== 'undefined' && window.Vue) {
- install(window.Vue);
+	install.use(window.Vue);
 }
  
 export default {
-	version: '1.0.2',
-	install,
+	version: '1.0.3',
 	tableCommon,
 	paginationCommon,
 	dialogCommon

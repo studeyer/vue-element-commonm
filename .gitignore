@@ -1,12 +1,21 @@
-.DS_Store
-node_modules/
-dist/
-npm-debug.log
-yarn-error.log
+// 不会被npm忽略的文件
+package.json
+README (and its variants)
+CHANGELOG (and its variants)
+LICENSE / LICENCE
 
-# Editor directories and files
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
+// 一定会忽略的
+node_modules
+/src
+.*.swp
+._*
+.DS_Store
+.git
+.hg
+.npmrc
+.lock-wscript
+.svn
+.wafpickle-*
+config.gypi
+CVS
+npm-debug.log
