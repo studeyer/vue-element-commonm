@@ -1,14 +1,14 @@
 {
   "name": "vue-element-manage",
   "description": "基于在ElementUI的基础上集成适合vue管理系统使用的table,form,Pagination,Dialog组件",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "caiht@yishanol.com <caiht@yishanol.com>",
   "license": "MIT",
   "private": false,
   "main": "dist/vue-element-manage.js",
   "repository": {
     "type": "git",
-    "url": "https://www.npmjs.com/package/vue-element-manage"
+    "url": "https://github.com/studeyer/vue-element-commonm"
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",

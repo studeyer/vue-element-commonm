@@ -3,7 +3,6 @@ import dialogCommon from './dialogCommon';
 import paginationCommon from './paginationCommon';
 import searchCommon from './searchCommon';
 import tableCommon from './tableCommon';
-
  
 const Components = {
   dialogCommon,

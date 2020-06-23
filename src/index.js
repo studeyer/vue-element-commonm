@@ -22,5 +22,11 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
  
 export default {
-  install
+  install,
+	clearObject(obj) {
+	  for (let name in obj) {
+	    obj[name] = '';
+	  }
+	  return obj;
+	}
 }
