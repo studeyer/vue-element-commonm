@@ -1,24 +1,31 @@
 {
-  "name": "vue-element-commonm",
-  "description": "A Vue.js project",
-  "version": "1.0.3",
+  "name": "vue-element-manage",
+  "description": "基于在ElementUI的基础上集成适合vue管理系统使用的table,form,Pagination,Dialog组件",
+  "version": "1.0.0",
   "author": "caiht@yishanol.com <caiht@yishanol.com>",
   "license": "MIT",
   "private": false,
-  "main": "dist/vue-element-commonm.js",
+  "main": "dist/vue-element-manage.js",
   "repository": {
     "type": "git",
-    "url": "https://www.npmjs.com/package/vue-element-commonm"
+    "url": "https://www.npmjs.com/package/vue-element-manage"
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "dist": "npm run clean && npm run build:file && npm run lint && webpack --config build/webpack.conf.js && webpack --config build/webpack.common.js && webpack --config build/webpack.component.js && npm run build:utils && npm run build:umd && npm run build:theme",
+    "build:file": "node build/bin/iconInit.js & node build/bin/build-entry.js & node build/bin/i18n.js & node build/bin/version.js",
+    "pub": "npm run bootstrap && sh build/git-release.sh && sh build/release.sh && node build/bin/gen-indices.js && sh build/deploy-faas.sh"
   },
   "dependencies": {
     "element-ui": "^2.13.1",
     "vue": "^2.5.11",
     "axios": "^0.19.0"
   },
+  "keywords": [
+  	"element-ui二次封装",
+  	"table,form使用"
+  ],
   "browserslist": [
     "> 1%",
     "last 2 versions",

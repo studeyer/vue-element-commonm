@@ -2,12 +2,12 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry:process.env.NODE_ENV=='development'?'./src/main.js':'./src/index.js', //
+  entry:'./src/index.js', //process.env.NODE_ENV=='development'?'./src/main.js':
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: "vue-element-commonm.js",
-    library: "elementCommon", // 指定的就是你使用require时的模块名
+    filename: "vue-element-manage.js",
+    library: "ElementManage", // 指定的就是你使用require时的模块名
     libraryTarget: 'umd', // libraryTarget会生成不同umd的代码,可以只是commonjs标准的，也可以是指amd标准的，也可以只是通过script标签引入的
     umdNamedDefine: true 
   },
