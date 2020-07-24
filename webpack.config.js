@@ -2,8 +2,11 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry:'./src/index.js', //process.env.NODE_ENV=='development'?'./src/main.js':
+  entry:'./src/index.js',//'./src/main.js'
   output: {
+//	path: path.resolve(__dirname, './dist'),
+//  publicPath: '/dist/',
+//  filename: 'build.js'
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
     filename: "vue-element-manage.js",

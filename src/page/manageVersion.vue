@@ -5,7 +5,9 @@
       <div class="border-line"></div>
     </div>
     <!--table-->
-    <table-common v-bind:formDateTable="formDateTable"></table-common>
+    <table-common 
+    	v-bind:formDateTable="formDateTable" 
+      @cellClick="cellClick"></table-common>
     <!--paginotaion-->
     <pagination-common
       v-bind:formDatePagination="paginationDate"
@@ -64,32 +66,24 @@ export default {
             show: true
           },
           {
-            prop: "userName",
+            prop: "os",
             label: "app类型",
             // width: '150',
             show: true
           },
           {
-            prop: "state",
+            prop: "is_force",
             label: "强制更新",
-            // width: "200",
             show: true,
-            formatter: this.selftate
           },
           {
-            prop: "mainAccount",
+            prop: "title",
             label: "更新标题",
             // width: '100',
             show: true
           },
           {
-            prop: "mainAccount",
-            label: "更新日志",
-            // width: '100',
-            show: true
-          },
-          {
-            prop: "mainAccount",
+            prop: "create_time",
             label: "	更新日期",
             // width: '100',
             show: true
@@ -136,6 +130,19 @@ export default {
     //获取列表-更改分页
     getGoodsList() {
     	console.log("获取列表-更改分页")
+    	this.formDateTable.tableData =[{
+    		create_time: "2019-05-13 09:50:50",
+				file_path: "/gasStationAppVersion/20190513095254/轶善正式 .apk",
+				id: "488210149996412928",
+				is_force: "是",
+				note: "支付规则NFC更新",
+				os: "android",
+				mainAccount: "1.0",
+				name: "更新支付规则NFC",
+				title: "123456",
+				url: "https://yishanol.com/ht_platform/gasStationApp/getLatestAndroid.do?project=pos",
+				version: "69"
+    	}]
 //    findMerchantsByPage({
 //      pageNumber: this.paginationDate.currentPage,
 //      pageSize: this.paginationDate.pageSize
@@ -376,7 +383,9 @@ export default {
     updateDialogState(data) {
       this.dialogComponentState = data;
     },
-
+		cellClick(row, column, cell){
+			console.log(row)
+		},
     // 公用dialog组件事件-end
 
     // 公用dialog--当前上传文件
@@ -391,4 +400,11 @@ export default {
 </script>
 
 <style lang="less" scoped>
+	.common_detail_wrap{
+		/deep/ .table-wrap{
+			.tb-style:nth-child(1){
+				color: red;
+			}
+		}
+	}
 </style>

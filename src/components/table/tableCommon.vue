@@ -14,6 +14,7 @@
       cell-class-name="tb-style"
       @select="selectsRow"
       @select-all="selectsRow"
+      @cell-click="cellClick"
       border
     >
       <!--选择框-->
@@ -348,6 +349,10 @@ export default {
 
     selectsRow(selection, row) {
       this.$emit("selectsRow", selection, row);
+    },
+    //单元格点击
+    cellClick(row, column, cell, event){
+    	this.$emit("cellClick", row, column, cell);
     },
     //switch操作变化
     switchChange(row) {

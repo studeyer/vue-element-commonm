@@ -13,6 +13,7 @@ npm install
 3.在install使用的npm不能和你现使用的项目package.json的name重名
 4.在项目中如果是export default install的话（属于组件挂载到全局）,直接<search-common></search-common>就可以了，也可以按需加载
 5.你发布的npm包名不可重复，没有问题话基本上就咱们就传上去吧！
+
 # search
 <search-common v-bind:searchForm="searchFormData" ref="searchForm"></search-common>
 # table
@@ -24,6 +25,8 @@ npm install
 对公共方法的使用如下
 import commonMethods from "vue-element-manage";
 commonMethods.clearObject(this.searchFormData.keys);
+
+-----------2020-07-24 新增表格单元格被点击事件------------------
 
 
 
