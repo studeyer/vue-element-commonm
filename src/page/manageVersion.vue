@@ -53,6 +53,22 @@ export default {
       formDateTable: {
         tableData: [],
         tableColum: [
+        	{
+						prop: "imageUrl",
+						label: "商品图片",
+						// width: "100",
+						show: true,
+						type: "customModule",
+						moduleType: "image"
+					},
+        	{
+						prop: "paixu",
+						label: "商品图片",
+						// width: "100",
+						show: true,
+						type: "customModule",
+						moduleType: "image",
+					},
           {
             prop: "name",
             label: "平台",
@@ -141,8 +157,14 @@ export default {
 				name: "更新支付规则NFC",
 				title: "123456",
 				url: "https://yishanol.com/ht_platform/gasStationApp/getLatestAndroid.do?project=pos",
+				imageUrl:'https://s3.pstatp.com/toutiao/xitu_juejin_web/img/logo.a7995ad.svg',
+				paixu:"http://172.168.20.105:8080/jenkins/static/1559200c/images/headshot.png",
 				version: "69"
     	}]
+    	console.log(this.formDateTable.tableData)
+    	this.formDateTable.tableData.map(val=>{
+    		val.bendi=require("../assets/alipay.jpg")
+    	})
 //    findMerchantsByPage({
 //      pageNumber: this.paginationDate.currentPage,
 //      pageSize: this.paginationDate.pageSize

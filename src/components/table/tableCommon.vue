@@ -153,7 +153,7 @@
             fit="contain"
           >
           </el-image>-->
-           <img v-if="item.moduleType == 'image' && scope.row.imageUrl!=null" :src="scope.row.imageUrl.url" alt="" style="width: 60px; height: 60px"	:imgid="scope.row.imageUrl.id" 	v-err-img="scope.row.imageUrl.url">
+           <el-image v-if="item.moduleType == 'image'" :src="scope.row[item.prop]" class="tb-image" alt=""></el-image>
           <!-- <img v-if="item.moduleType == 'image'" :src="scope.row[item.prop]" alt /> -->
           <!-- 图片组件end -->
           <!--文本点击组件-->
@@ -473,6 +473,10 @@ export default {
       text-overflow: ellipsis;
       font-size: 13px;
       border: none;
+    }
+    .el-image{
+      width:60px;
+      height:60px;
     }
   }
 

@@ -1,10 +1,12 @@
 var path = require('path')
 var webpack = require('webpack')
-
+function resolve(dir) {
+  return path.join(__dirname, '..', dir)
+}
 module.exports = {
-  entry:'./src/index.js',//'./src/main.js'
+  entry:'./src/index.js', //'./src/main.js',
   output: {
-//	path: path.resolve(__dirname, './dist'),
+	path: path.resolve(__dirname, './dist'),
 //  publicPath: '/dist/',
 //  filename: 'build.js'
     path: path.resolve(__dirname, './dist'),
@@ -58,7 +60,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
+      '@': resolve('src'),
     },
     extensions: ['*', '.js', '.vue', '.json']
   },

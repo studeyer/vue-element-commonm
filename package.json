@@ -1,7 +1,7 @@
 {
   "name": "vue-element-manage",
   "description": "基于在ElementUI的基础上集成适合vue管理系统使用的table,form,Pagination,Dialog组件",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "author": "caiht@yishanol.com <caiht@yishanol.com>",
   "license": "MIT",
   "private": false,
