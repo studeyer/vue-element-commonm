@@ -162,9 +162,6 @@ export default {
 				version: "69"
     	}]
     	console.log(this.formDateTable.tableData)
-    	this.formDateTable.tableData.map(val=>{
-    		val.bendi=require("../assets/alipay.jpg")
-    	})
 //    findMerchantsByPage({
 //      pageNumber: this.paginationDate.currentPage,
 //      pageSize: this.paginationDate.pageSize

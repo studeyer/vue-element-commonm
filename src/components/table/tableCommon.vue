@@ -390,7 +390,6 @@ export default {
 </script>
 
 <style lang="less">
-@colorActive: #f938ab;
 .el-popover {
   min-width: 50px;
 }
@@ -422,10 +421,6 @@ export default {
   font-size: 13px;
   cursor: pointer;
   padding-left: 10px;
-}
-
-.tool-btn:hover {
-  color: @colorActive;
 }
 
 .table-wrap {
@@ -559,14 +554,6 @@ export default {
 
     .el-button:hover {
       background: none !important;
-    }
-
-    .el-button--text {
-      color: @colorActive;
-
-      span {
-        color: @colorActive;
-      }
     }
 
     .tool-lise {
